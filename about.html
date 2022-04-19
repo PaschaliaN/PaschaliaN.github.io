@@ -36,25 +36,26 @@
 		</nav>
 	</header>
 	<main class="container" id="main">
-			<h1>About Me</h1>
+			<h1 tabindex="0" >About Me</h1>
 			<div class="about_container">
-				<div class="flip-card">
+					<div class="flip-card">
 					<div class="flip-card-inner">
 					  <div class="flip-card-front">
-						  <img class="about-img" src="images/paschalia.webp" alt="a photograph of a black woman who wrote this website" width="200"/>
+						  <img tabindex="0" class="about-img" src="images/paschalia.webp" alt="a photograph of a black woman who wrote this website" width="200"/>
 						  
 					  </div>
 					  <div class="flip-card-back">
-						<h3>Psschalia Nsato</h3> 
-						<p>Author and Designer of the site</p> 
-						<p><a>Link to my other portfolio</a></p>
+						<h3 tabindex="0" > Paschalia Nsato</h3> 
+						<p tabindex="0" >Site Designer</p> 
 					  </div>
 					</div>
-				  </div>
+
+			</div>
+				
 				<!-- <img class="about-img" src="images/paschalia.webp" alt="a photograph of a black woman who wrote this website" width="200"/> -->
 		
-				<div class="about-text">
-				<p>Hello there! My name is Paschalia Nsato. I am located in Ann Arbor, MI, but I am originally from Dar es Salaam, Tanzania.  I would describe myself as an all-around creative person.
+			<div tabindex="0" class="about-text">
+				<p >Hello there! My name is Paschalia Nsato. I am located in Ann Arbor, MI, but I am originally from Dar es Salaam, Tanzania.  I would describe myself as an all-around creative person.
 					I love art, design, and photography. I have been drawing ever since I was little, and I started doing client work photography in 2019. 
 					I do graduation, engagement, family events, beauty and children photoshoots. However, I am open to being contacted on any photography opportunity.
 					I stopped after the pandemic hit in 2020, and I was living in Tanzania.
@@ -70,7 +71,7 @@
 			</div>
 			</div>
 			<div class="form_align">
-				<form class="myform">
+				<form tabindex="0" aria-label="Fill this form to contact me" class="myform" action="https://formspree.io/f/mwkyqdee" method="POST">
 					<fieldset>
 					  <legend>CONTACT ME</legend>
 		
@@ -79,9 +80,9 @@
 		
 					  <label for="email_id"><i class="fa-solid fa-envelope"></i> Email</label>
 					  <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
-		
-					  <label for="Phone"><i class="fa-solid fa-phone"></i>  Phone Number (Optional) </label>
-					  <input type="number" placeholder="Enter Your Phone number" name="number" optional>
+
+					  <label for="phone"><i class="fa-solid fa-phone"></i> Enter your phone number:</label>
+					<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" optional>
 		
 					  <label for="msg">Message</label>
 					  <textarea placeholder="Leave your message here" id = "msg" name="mesg" required></textarea><br>
@@ -91,7 +92,7 @@
 				  
 					  <input type="submit" value = "Contact Me">
 					</fieldset>
-				   </form>
+				</form>
 
 			</div>
 	</main>
@@ -100,7 +101,7 @@
 			<a href="https://www.linkedin.com/feed/" aria-label="A Link to my LinkedIn page"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
 			<a href="https://www.instagram.com/artsypassy/" aria-label="A link to my Instagram page"><i class="fa-brands fa-instagram-square fa-2xl"></i></a>
 		</div>
-		<p>Paschalia Nsato &copy; 2022</p>
+		<p tabindex="0">Paschalia Nsato &copy; 2022</p>
 	</footer>
 </body>
 </html>
