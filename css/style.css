@@ -181,21 +181,28 @@ p{
 /* about styling */
 .about{
   background-image: url(../images/background.webp);
+  min-height: 30vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about_container{
   display: grid;
   justify-items: center;
 }
 .about-img{
+  object-fit: cover;
   animation-name: myimage;
   animation-duration: 5s;
 }
-@keyframes myimage {
+/* turned off my image animations */
+/* @keyframes myimage {
   0% {width: 0; opacity: 25;}
   100%{width: 100%; opacity: 1;}
-}
+} */
 
-.about-img, .background, .about-text, .myform{
+.background, .about-text{
   grid-column: 1 / 4;
   max-height: 700px;
   overflow: hidden;
@@ -203,7 +210,7 @@ p{
 .about-img{
   overflow: hidden;
   grid-row: 1 / 2;
-  max-width: 80%;
+  /* max-width: 80%; */
   align-self: center;
 }
 
@@ -297,6 +304,9 @@ input[type=submit] {
       animation: none;
   }
 }
+
+
+
 /* tablet breakpoint and small computers, adjust endpoints */
 @media only screen and (min-width: 700px){
   .nav_links{
@@ -364,10 +374,41 @@ input[type=submit] {
    overflow: hidden;
    /* align-self: stretch; */
   }
+  
+  /* about styling */
+  .about_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .about-img{
+    min-width: 100%;
+    min-height: 100%;
+    flex-basis: 40vh;
+    /* max-width: 80%; */
+  }
+  .about-text{
+    height: auto;
+    margin-bottom: 2em;
+  }
+
+  form {
+    flex-basis: 100vw;
+    height: auto;
+  }
+
   /* flip card styling */
-  .flip-card {
-    width: 30%;
-    height: 45%;
+.flip-card {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent;
+  width: 45%;
+  height: 45vh;
+  perspective: 1000px;
+  margin-bottom: 5vh;
   }
   
   .flip-card-inner {
@@ -393,39 +434,15 @@ input[type=submit] {
   }
   
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #ffffff;
     color: black;
   }
   
   .flip-card-back {
-    background-color: black;
+    background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
   }
-
-
-  /* about styling */
-  .about_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } 
-
-  .about-img{
-    width: auto;
-    flex-basis: 40vh;
-    max-width: 80%;
-  }
-  .about-text{
-    height: auto;
-    margin-bottom: 2em;
-  }
-
-  form {
-    flex-basis: 100vw;
-    height: auto;
-  }
-  
 
 }
 @media only screen and (min-width: 1070px){
@@ -440,9 +457,9 @@ input[type=submit] {
     justify-content: center;
   } 
   .about-img{
-    flex-basis: 40vw;
+    /* flex-basis: 40vw;
     max-height: none;
-    max-width: 40%;
+    max-width: 40%; */
   }
   .about-text{
   flex-basis: 60vw;
@@ -451,6 +468,10 @@ input[type=submit] {
   form{
     width: 100%;
   }
+  /* .flip-card{
+    max-width: 20vw;
+    min-height: 30vh;
+  } */
   /* .myform{
     max-width: 80%;
     height: 100vh;
