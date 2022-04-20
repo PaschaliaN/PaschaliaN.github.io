@@ -28,7 +28,6 @@
 		<nav>
 			<ul class="nav_links">
 				<li><a href = "index.html" >Home</a></li>
-				<!-- The page below is where all the contect will live -->
 				<li><a href = "work.html">Work</a></li>
 				<li><a href = "safari.html">Safari</a></li>
 				<li class="active"><a href = "about.html">About</a></li>
@@ -36,7 +35,7 @@
 		</nav>
 	</header>
 	<main class="container" id="main">
-			<h1 tabindex="0" >About Me</h1>
+		<h1 class="about_heading" tabindex="0" >About Me</h1>
 			<div class="about_container">
 					<div class="flip-card">
 					<div class="flip-card-inner">
@@ -45,8 +44,8 @@
 						  
 					  </div>
 					  <div class="flip-card-back">
-						<h3 tabindex="0" > Paschalia Nsato</h3> 
-						<p tabindex="0" >Site Designer</p> 
+						<h3 class="hide" tabindex="0" > Paschalia Nsato</h3> 
+						<p class ="hide" tabindex="0" > Site Designer  </p> 
 					  </div>
 					</div>
 
@@ -82,7 +81,7 @@
 					  <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
 
 					  <label for="phone"><i class="fa-solid fa-phone"></i> Enter your phone number:</label>
-					<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" optional>
+					<input type="tel" placeholder="Enter your phone number" id="phone" name="phone">
 		
 					  <label for="msg">Message</label>
 					  <textarea placeholder="Leave your message here" id = "msg" name="mesg" required></textarea><br>
